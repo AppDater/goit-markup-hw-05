@@ -150,7 +150,11 @@ margin-right:50px;
 .link:hover, .link:focus{
     color: var(--action_color);
     z-index: 1;
+}
 
+.link.link_uncommon{
+    color: var(--action_color);
+    z-index: 1;
 }
 
 .link_uncommon{
@@ -210,10 +214,8 @@ margin-bottom: 30px;
     background-color: rgba(0,0,0,0.2);
     opacity: 1;
     pointer-events: all;
-    visibility: visible;  
-    
-    transition-duration:250ms;
-    transition-property: transform;
+    visibility: visible;
+    transition: opacity 1000ms, visibility 1000ms;
 }
 
 
@@ -221,8 +223,7 @@ margin-bottom: 30px;
 opacity: 0;
 pointer-events: none;
 visibility: hidden;
-transform: translateX(0);
-transition-property: transform;
+transition: opacity 1000ms, visibility 1000ms;
 }
 
 .modal_wrapper{
@@ -237,7 +238,7 @@ transition-property: transform;
         border-radius: 4px;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-}
+
 .modal_btn{
     position: absolute;
     right: 8px;
@@ -342,7 +343,7 @@ transition-property: transform;
         z-index: 2;
 }
 
-.illustration_picture:nth-child(1):after{
+.illustration_picture:nth-child(1)::after{
     content: '';
     position: absolute;
     bottom: 0;
@@ -352,7 +353,7 @@ transition-property: transform;
     background-color: rgba(47, 48, 58, 0.8);
 }
 
-.illustration_picture:nth-child(2):after {
+.illustration_picture:nth-child(2)::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -362,7 +363,7 @@ transition-property: transform;
     background-color: rgba(47, 48, 58, 0.8);
 }
 
-.illustration_picture:nth-child(3):after {
+.illustration_picture:nth-child(3)::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -648,6 +649,7 @@ margin-bottom: 9px;
 }
 
 .studio_project{
+    position: relative;
     background: var(--back_color);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -659,6 +661,13 @@ margin-bottom: 9px;
     display: block;
     text-decoration: none;
     color: inherit;
+}
+
+.studio_project::after{
+    position: absolute;
+    width: 100px;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);;
 }
 
 .studio_project a:hover,
