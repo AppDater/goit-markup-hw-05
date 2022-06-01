@@ -99,6 +99,7 @@ letter-spacing: 0.02em;
 color: inherit;
 padding-top: 25px;
 padding-bottom: 25px;
+transition:color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links{
@@ -452,6 +453,7 @@ transition: opacity 1000ms, visibility 1000ms;
 
 .team_member_contact{
     fill: #AFB1B8;
+    transition: background-color,fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team_member_contact:hover,
@@ -496,6 +498,7 @@ transition: opacity 1000ms, visibility 1000ms;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: border, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client_icon{
@@ -586,6 +589,7 @@ margin-bottom: 9px;
             justify-content: center;
             align-items: center;
             background-color: rgba(255, 255, 255, 0.1);
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio_link:not(:last-child){
@@ -617,6 +621,7 @@ margin-bottom: 9px;
     cursor: pointer;
     padding: 6px 21px;
     border: 0;
+    transition:background-color, color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sort_buttons{
@@ -653,6 +658,7 @@ margin-bottom: 9px;
     background: var(--back_color);
     margin-right: 30px;
     margin-bottom: 30px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio_project a{
@@ -662,6 +668,7 @@ margin-bottom: 9px;
     display: block;
     text-decoration: none;
     color: inherit;
+    
 }
 
 .annotation{
@@ -688,8 +695,8 @@ margin-bottom: 9px;
     color: #FFFFFF;
 }
 
-.studio_project a:hover,
-.studio_project a:focus{
+.studio_project:hover,
+.studio_project:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
